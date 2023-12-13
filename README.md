@@ -1,8 +1,8 @@
-# A Novel Dual-stage Progressive Enhancement Network for Single Image Deraining
+# From Heavy Rain Removal to Detail Restoration: A Faster and Better Network
 
 [![Paper](https://img.shields.io/badge/Paper-arXiV-blue)](https://arxiv.org/pdf/2205.03553.pdf)  [![Project](https://img.shields.io/badge/Project-GitHub-gold)](https://github.com/chdwyb/DPENet)
 
-Abstract: The dense rain accumulation in heavy rain can significantly wash out images and thus destroy the background details of images. Although existing deep rain removal models lead to improved performance for heavy rain removal, we find that most of them ignore the detail reconstruction accuracy of rain-free images. In this paper, we propose a dual-stage progressive enhancement network (DPENet) to achieve effective deraining with structure-accurate rain-free images. Two main modules are included in our framework, namely a rain streaks removal network (R2Net) and a detail reconstruction network (DRNet). The former aims to achieve accurate rain removal, and the latter is designed to recover the details of rain-free images. We introduce two main strategies within our networks to achieve trade-off between the effectiveness of deraining and the detail restoration of rain-free images. Firstly, a dilated dense residual block (DDRB) within the rain streaks removal network is presented to aggregate high/low level features of heavy rain. Secondly, an enhanced residual pixel-wise attention block (ERPAB) within the detail reconstruction network is designed for context information aggregation. We also propose a comprehensive loss function to highlight the marginal and regional accuracy of rain-free images. Extensive experiments on benchmark public datasets show both efficiency and effectiveness of the proposed method in achieving structure-preserving rain-free images for heavy rain removal.
+Abstract: The profound accumulation of precipitation during intense rainfall events can markedly degrade the quality of images, leading to the erosion of textural details. Despite the improvements observed in existing learning-based methods specialized for heavy rain removal, it is discerned that a significant proportion of these methods tend to overlook the precise reconstruction of the intricate details. In this work, we introduce a simple dual-stage progressive enhancement network, denoted as DPENet, aiming to achieve effective deraining while preserving the structural accuracy of rain-free images. This approach comprises two key modules, a rain streaks removal network (R$^2$Net) focusing on accurate rain removal, and a details reconstruction network (DRNet) designed to recover the textural details of rain-free images. Firstly, we introduce a dilated dense residual block (DDRB) within R$^2$Net, enabling the aggregation of high-level and low-level features. Secondly, an enhanced residual pixel-wise attention block (ERPAB) is integrated into DRNet to facilitate the incorporation of contextual information. To further enhance the fidelity of our approach, we employ a comprehensive loss function that accentuates both the marginal and regional accuracy of rain-free images. Extensive experiments conducted on publicly available benchmarks demonstrates the noteworthy efficiency and effectiveness of our proposed DPENet. The source code and pre-trained models are currently available at \url{https://github.com/wybchd/DPENet}.
 
 ![network](./image/network.png)
 
@@ -33,13 +33,14 @@ python test.py
 If you find this project useful in your research, please consider citing:
 
 ```
-@article{gao2022heavy,
+@article{wen2022heavy,
       title={From Heavy Rain Removal to Detail Restoration: A Faster and Better Network}, 
-      author={Tao Gao and Yuanbo Wen and Jing Zhang and Kaihao Zhang and Ting Chen},
+      author={Yuanbo Wen and Tao Gao and Jing Zhang and Kaihao Zhang and Ting Chen},
       journal={arXiv preprint arXiv:2205.03553},
       year={2022},
 }
 ```
 
 ## Contact us
-Please contact us if there is any question or suggestion (wyb@chd.edu.cn).
+Please contact us if there are any questions or suggestions (wyb@chd.edu.cn).
+
